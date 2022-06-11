@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <div>原始版本{{$store.state.count}}</div>
+      <div>计算属性版本{{count}}</div>
+      <div>计算属性版本{{count}}</div>
+      <div>计算属性版本{{liqiushi}}</div>
+      
+      
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  computed:{
+    // count(){
+    //   return this.$store.state.count
+    // }
+    // 辅助函数 mapState
+    ...mapState(['count','liqiushi'])
   }
 }
 </script>
