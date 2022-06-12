@@ -8,6 +8,17 @@ const store = new Vuex.Store({
   state:{
     count:0,
     liqiushi:720
+  },
+  mutations:{
+    // 突变 即数据发生变化 视图层立即发生变化
+    // 相当于method里面存储着大量的方法
+    addCount(state,playload){//第一个参数是当前store的state属性
+      state.count+= playload
+    
+    },
+    addAge(state,playload){
+      state.liqiushi+=playload
+    }
   }
 })
 
