@@ -18,7 +18,15 @@ const store = new Vuex.Store({
     },
     addAge(state,playload){
       state.liqiushi +=playload;
-      
+
+    }
+  },
+  actions:{
+    getAsyncCount(context,params){
+      setTimeout(function(){
+        context.commit('addCount',params)
+      },1000)
+
     }
   }
 })
