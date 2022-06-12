@@ -7,7 +7,8 @@ const store = new Vuex.Store({
   // 配置项
   state:{
     count:0,
-    liqiushi:720
+    liqiushi:720,
+    list: Array.from(Array(10), (v, i) => i + 1)
   },
   mutations:{
     // 突变 即数据发生变化 视图层立即发生变化
@@ -28,6 +29,10 @@ const store = new Vuex.Store({
       },1000)
 
     }
+  },
+  getters:{
+    filterList:state=>state.list.filter(item=>item>5)
+    
   }
 })
 

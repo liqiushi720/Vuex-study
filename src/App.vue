@@ -6,6 +6,7 @@
       <div>liqiushi{{liqiushi}}</div>
       <ChildA></ChildA>
       <button @click="jiajia">+100</button>
+      
   </div>
 </template>
 

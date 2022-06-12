@@ -5,14 +5,24 @@
         <button @click="addAge(100)">+100(这是通过辅助函数将store中的方法解构在当前组件中)</button>
         <button @click="text1">定时器异步函数</button>
         <button @click="getAsyncCount(9999)"></button>
-
+        <div>
+            {{$store.getters.filterList}}
+        </div>
+        <div>
+            {{filterList}}
+        </div>
+    
+        
     </div>
 </template>
 
 <script>
-import { mapMutations , mapActions} from 'vuex'
+import { mapMutations , mapActions , mapGetters} from 'vuex'
 
     export default {
+        computed:{
+            ...mapGetters(['filterList'])
+        },
         methods: {
             //   text(){
             //     this.$store.commit('addCount')
