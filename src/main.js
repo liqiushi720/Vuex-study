@@ -17,7 +17,8 @@ const store = new Vuex.Store({
     
     },
     addAge(state,playload){
-      state.liqiushi+=playload
+      state.liqiushi +=playload;
+      
     }
   }
 })
